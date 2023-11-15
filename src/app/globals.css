@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "react-awesome-slider/dist/styles.css";
+
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Play", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  @apply bg-[#000300] text-[#e6e7ec]/90;
+  /* font-size: calc(1rem - 6px); */
+}
+/* text-[62.5%] */
+/* body {
+  @apply md:text-[45%] lg:text-[62.5%];
+} */
+
+.fontFam {
+  font-family: "Play", sans-serif;
+}
+
+.hoverText {
+  @apply relative flex items-center justify-center before:content-[''] before:absolute before:w-full before:h-full before:md:h-[1px] before:rounded-r-full before:md:rounded-full before:bg-[#43fcff]/30 before:md:bg-[#43fcff]/90 hover:text-[#43fcff] hover:duration-700 before:origin-right before:transition-transform before:duration-[0.3s] before:ease-[ease-in-out] before:scale-x-0 before:left-0 before:bottom-0 hover:before:origin-left hover:before:scale-x-100;
+}
+
+::-webkit-scrollbar {
+  @apply w-[0.5px];
+}
+::-webkit-scrollbar-track {
+  @apply bg-[#000300];
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-[#43fcff];
+}
+
+.scrollDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.aws-btn {
+  --slider-height-percentage: 50%;
+  --slider-transition-duration: 541ms;
+  --organic-arrow-thickness: 2px;
+  --organic-arrow-border-radius: 0px;
+  --organic-arrow-height: 24px;
+  --organic-arrow-color: #43fcff;
+  --control-button-width: 5%;
+  --control-button-height: 25%;
+  --control-button-background: transparent;
+  --control-bullet-color: #43fcff;
+  --control-bullet-active-color: #43fcff;
+  --loader-bar-color: #43fcff85;
+  --loader-bar-height: 1px;
+}
