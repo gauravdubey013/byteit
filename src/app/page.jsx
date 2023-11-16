@@ -48,7 +48,7 @@ export default function Home() {
             <Dividor />
           </div>
           <section
-            id="aboutUs"
+            id="aboutus"
             className="w-full h-auto z-50 bg-black border-[px] px-[1rem] sm:px-[2rem] md:px-[3rem] lg:px-[4rem] overflow-hidden"
           >
             {/*  scrollDiv overflow-y-scroll scroll-snap-type-x-mandatory */}

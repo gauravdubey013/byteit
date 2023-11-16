@@ -15,7 +15,7 @@ const GenerateImage = () => {
   // const openai = new OpenAI({ apiKey: API_KEY });
 
   const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: "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",
     dangerouslyAllowBrowser: true,
   });
 
