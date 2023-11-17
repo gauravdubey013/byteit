@@ -244,7 +244,7 @@ export const techBlitz = [
         desc: "Get ready to showcase your vocal talents in the Karaoke Showdown! Sing your heart out to your favorite tunes.",
         time: "10:00am – 6:00pm",
         date: "18th December",
-        image: "/treasureHunt.png",
+        image: "/karaoke.png",
         btn: "/Event/TechBlitz"
     },
     {
@@ -253,7 +253,7 @@ export const techBlitz = [
         desc: "Witness the power of artificial intelligence in our AI TXT-2-IMG challenge. In this game, you'll be given a text prompt, and using the latest AI technology, you'll have to generate an image that best represents the given description. Unleash your creativity and see how well you can communicate your ideas through AI-generated images. It's a fascinating blend of human imagina.",
         time: "10:00am – 6:00pm",
         date: "22nd December",
-        image: "/speeedwayShowdown.png",
+        image: "/textToImg.jpg",
         btn: "/Event/TechBlitz"
     },
     {
@@ -262,7 +262,7 @@ export const techBlitz = [
         desc: "Step into a whole new world with our immersive VR Experience. Put on the virtual reality headset and be transported to breathtaking landscapes, thrilling adventures, and mind-bending simulations.",
         time: "10:00am – 6:00pm",
         date: "20th December",
-        image: "/darkWebAdventures.png",
+        image: "/vrExp.png",
         btn: "/Event/TechBlitz"
     },
     {
@@ -271,7 +271,7 @@ export const techBlitz = [
         desc: "Test your hand-eye coordination and nerves of steel in the electrifying Buzz Wire Game. Navigate a twisted wire without touching it, while the clock is ticking. Can you beat the challenge and reach the end without setting off the buzzer? Only the most skilled and steady-handed participants will emerge victorious!",
         time: "10:00am – 6:00pm",
         date: "22nd December",
-        image: "/animeScreening.png",
+        image: "/buzzWire.png",
         btn: "/Event/TechBlitz"
     },
 ];
