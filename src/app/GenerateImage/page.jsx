@@ -3,31 +3,28 @@
 import Image from "next/image";
 import React, { useRef, useState, useEffect } from "react";
 import { LuSend } from "react-icons/lu";
-import OpenAI from "openai";
 
 const GenerateImage = () => {
   const inputValueRef = useRef();
-  const [img, setImg] = useState(true);
-  const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
 
-  // const API_KEY = process.env.OPENAI_API_SECRET_KEY;
-  // const openai = new OpenAI({ apiKey: API_KEY });
+  const [img, setImg] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  const openai = new OpenAI({
-    apiKey: "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",
-    dangerouslyAllowBrowser: true,
-  });
+  const [hoveredImage, setHoveredImage] = useState(null);
 
   const generateImage = async (prompt) => {
     try {
-      const response = await openai.images.generate({
-        model: "dall-e-3",
-        prompt: prompt,
-        n: 1,
-        size: "1024x1024",
+      const response = await fetch("/api/generateImage", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt: prompt }),
       });
-      return response.data;
+      const data = await response.json();
+      console.log(data);
+      return data.data;
     } catch (error) {
       console.error(error);
       throw error;
@@ -72,6 +69,10 @@ const GenerateImage = () => {
     }
   }, []);
 
+  const openImageInNewTab = (imageUrl) => {
+    window.open(imageUrl, "_blank");
+  };
+
   return (
     <>
       <div className="w-full h-[71vh] md:h-[80vh] mb-1 flex flex-col items-center justify-center text-center gap-4 px-[1rem] sm:px-[2rem] md:px-[3rem] lg:px-[4rem] ease-in-out duration-200">
@@ -85,7 +86,7 @@ const GenerateImage = () => {
             } p-[10px] overflow-hidden`}
           >
             <div
-              className={`w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] ease-in-out duration-300 bg-[#43fcff]/60 bg-cover bg-center ${
+              className={`relative z-[1] shadow-[0px_5px_100px_10px_#00fbff81] w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] ease-in-out duration-300 bg-[#43fcff]/60 bg-cover bg-center ${
                 img ? `flex` : `hidden`
               } flex items-center justify-center rounded-2xl text-2xl text-[#43fcff]/80`}
               style={{
@@ -95,27 +96,35 @@ const GenerateImage = () => {
               <h1 className="text-xl">Write text to generate image . . .</h1>
             </div>
             <div
-              className={` w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] ease-in-out duration-300 bg-cover bg-center animate-pulse ${
+              className={`relative z-[1] shadow-[0px_10px_100px_25px_#28283d] w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] ease-in-out duration-300 bg-cover bg-center animate-pulse ${
                 loading ? `flex` : `hidden`
               } flex items-center justify-center rounded-2xl text-2xl text-[#43fcff]/80`}
               style={{
                 backgroundImage: "url(/GenerateImageBG.gif)",
               }}
             >
-              <h1>Generating in progress . . .</h1>
+              <h1 className="text-xl">Generating in progress . . .</h1>
             </div>
             {data?.map((imageObj, index) => (
               <div
                 key={index}
-                className="imageContainer w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] rounded-2xl ease-in-out duration-500 overflow-hidden"
+                className="imageContainer relative z-[1] shadow-[0px_10px_100px_25px_#28283d] w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] cursor-pointer rounded-2xl ease-in-out duration-500 overflow-hidden"
+                onClick={() => openImageInNewTab(imageObj.url)}
+                onMouseEnter={() => setHoveredImage(index)}
+                onMouseLeave={() => setHoveredImage(null)}
               >
                 <Image
                   src={imageObj.url}
                   width={500}
                   height={500}
                   alt="generated images"
-                  className="w-full h-full"
+                  className="shadowEff w-full h-full"
                 />
+                {hoveredImage === index && (
+                  <h1 className="absolute inset-0 flex items-center justify-center text-xl text-white bg-black bg-opacity-50 ease-in-out duration-300">
+                    Tap to open image in new tab
+                  </h1>
+                )}
               </div>
             ))}
           </div>
@@ -130,11 +139,17 @@ const GenerateImage = () => {
               ref={inputValueRef}
               name="promptInput"
               placeholder="Enter text to generate"
-              className="fontFam bg-transparent w-full h-[70%] md:h-full outline-none p-2 text-lg text-[#43fcff] placeholder:text-xl hover:placeholder:text-[#43fcff] focus:placeholder:text-[#43fcff] rounded-full ease-in-out duration-500"
+              className="fontFam bg-transparent w-full h-[70%] md:h-[90%] outline-none p-2 text-lg text-[#43fcff] placeholder:text-xl hover:placeholder:text-[#43fcff] focus:placeholder:text-[#43fcff] rounded-full ease-in-out duration-500"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  fetchData(e);
+                }
+              }}
             />
             <button
               type="submit"
-              className="w-[25%] h-full outline-none border-[1px] border-[#43fcff] rounded-full cursor-pointer text-[#43fcff] hover:bg-[#43fcff]/60 hover:text-white -mr-5 flex items-center justify-center ease-in-out duration-500"
+              className="w-[25%] h-full outline-none border-[1px] border-[#43fcff] rounded-full cursor-pointer text-white hover:text-[#43fcff] bg-[#43fcff]/[60%] hover:bg-transparent focus:text-[#43fcff] -mr-5 flex items-center justify-center ease-in-out duration-300"
             >
               <div className="flex flex-row gap-2">
                 <span className="text-[3vh] md:hidden">

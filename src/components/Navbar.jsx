@@ -68,7 +68,7 @@ const Navbar = () => {
               ))}
             </div>
             <Link href={"/Event"} className="ml-2">
-              <button className="signout p-[4px] border-[0.5px] border-[#43fcff] w-[6rem] bg-[#43fcff]/[60%] hover:bg-transparent text-white hover:text-[#43fcff] cursor-pointer rounded-[5px] ease-in-out duration-300">
+              <button className="eventBtn p-[4px] border-[0.5px] border-[#43fcff] w-[6rem] bg-[#43fcff]/[60%] hover:bg-transparent text-white hover:text-[#43fcff] cursor-pointer rounded-[5px] ease-in-out duration-300">
                 Events
               </button>
             </Link>

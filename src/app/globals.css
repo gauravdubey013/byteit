@@ -56,3 +56,23 @@ html {
   --loader-bar-color: #43fcff85;
   --loader-bar-height: 1px;
 }
+
+/* const response = await openai.images.generate({
+     model: "dall-e-3",
+     prompt: prompt,
+     n: 1,
+   size: "1024x1024",
+ });
+
+ const API_KEY = process.env.OPENAI_API_SECRET_KEY;
+ const openai = new OpenAI({ apiKey: apiKey });
+
+ const openai = new OpenAI({
+   apiKey: "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",
+   dangerouslyAllowBrowser: true,
+ }); */
+
+
+ .shadowEff {
+  @apply bg-[#43fcff]/60 flex after:content-[""] after:w-full after:h-full after:absolute after:shadow-[0_10px_15px_-2px_#000,0_5px_7px_-3px_#00fbff81] after:z-[-1] after:left-0 after:top-0;
+}
