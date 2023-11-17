@@ -3,7 +3,7 @@
 import { OpenAI } from "openai";
 import { NextResponse } from "next/server";
 
-const util = require('util');
+// const util = require('util');
 
 const openai = new OpenAI({
     api_key: process.env.OPENAI_API_KEY

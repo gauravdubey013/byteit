@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React, { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 import { LuSend } from "react-icons/lu";
 
 const GenerateImage = () => {
@@ -45,7 +45,7 @@ const GenerateImage = () => {
         }}
       >
         <h1 className="text-xl">
-          Provide prompt text first to generate image . . .
+          Please provide prompt text first to generate image . . .
         </h1>
       </div>;
       return;
@@ -86,7 +86,7 @@ const GenerateImage = () => {
             } p-[10px] overflow-hidden`}
           >
             <div
-              className={`relative z-[1] shadow-[0px_5px_100px_10px_#00fbff81] w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] ease-in-out duration-300 bg-[#43fcff]/60 bg-cover bg-center ${
+              className={` w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] ease-in-out duration-300 bg-[#43fcff]/60 bg-cover bg-center ${
                 img ? `flex` : `hidden`
               } flex items-center justify-center rounded-2xl text-2xl text-[#43fcff]/80`}
               style={{
@@ -96,7 +96,7 @@ const GenerateImage = () => {
               <h1 className="text-xl">Write text to generate image . . .</h1>
             </div>
             <div
-              className={`relative z-[1] shadow-[0px_10px_100px_25px_#28283d] w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] ease-in-out duration-300 bg-cover bg-center animate-pulse ${
+              className={` w-[95%] h-[95%] sm:w-[80%] md:w-[70%] lg:w-[40%] ease-in-out duration-300 bg-cover bg-center animate-pulse ${
                 loading ? `flex` : `hidden`
               } flex items-center justify-center rounded-2xl text-2xl text-[#43fcff]/80`}
               style={{
