@@ -226,17 +226,6 @@ export const cyberBurst = [
     },
 ];
 
-export const seminar = [
-    {
-        id: 1,
-        title: "Lecture  :",
-        desc: "Get ready to showcase your vocal talents in the Karaoke Showdown! Sing your heart out to your favorite tunes.",
-        time: "10:00am – 6:00pm",
-        date: "18th December",
-        image: "/seminar.jpg",
-        btn: "/Event/TechBlitz"
-    },
-]
 export const techBlitz = [
     {
         id: 1,
@@ -275,3 +264,15 @@ export const techBlitz = [
         btn: "/Event/TechBlitz"
     },
 ];
+
+export const seminar = [
+    {
+        id: 1,
+        title: "Lecture  :",
+        desc: "Get ready to showcase your vocal talents in the Karaoke Showdown! Sing your heart out to your favorite tunes.",
+        time: "10:00am – 6:00pm",
+        date: "18th December",
+        image: "/seminar.jpg",
+        btn: "/Event/TechBlitz"
+    },
+]
