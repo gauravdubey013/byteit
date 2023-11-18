@@ -149,7 +149,7 @@ export const EventDetails = (props) => {
                 </p>
                 <Link
                   href={event.btn}
-                  className="w-[25%] lg:w-[20%] h-[4vh] text-center flex justify-center items-center text-[#43fcff] hover:text-white scale-95 hover:scale-100 hover:bg-[#43fcff]/40 hover:border-[0.5px] hover:border-[#43fcff] rounded-full ease-in-out duration-300"
+                  className="w-[25%] h-[4vh] text-center flex justify-center items-center text-[#43fcff] hover:text-white scale-95 hover:scale-100 hover:bg-[#43fcff]/40 hover:border-[0.5px] hover:border-[#43fcff] rounded-full ease-in-out duration-300"
                 >
                   {props.evBtnLink}
                 </Link>
