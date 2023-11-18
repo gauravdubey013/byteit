@@ -1,23 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import "react-awesome-slider/dist/styles.css";
 
 * {
   padding: 0%;
   margin: 0%;
   font-family: "Play", sans-serif;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 html {
   @apply bg-[#000300] text-[#e6e7ec]/90;
-  /* font-size: calc(1rem - 6px); */
+  scroll-behavior: smooth !important;
 }
-/* text-[62.5%] */
-/* body {
-  @apply md:text-[45%] lg:text-[62.5%];
-} */
+
 
 .fontFam {
   font-family: "Play", sans-serif;
@@ -71,7 +69,6 @@ html {
    apiKey: "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",
    dangerouslyAllowBrowser: true,
  }); */
-
 
  .shadowEff {
   @apply bg-[#43fcff]/60 flex after:content-[""] after:w-full after:h-full after:absolute after:shadow-[0_10px_15px_-2px_#000,0_5px_7px_-3px_#00fbff81] after:z-[-1] after:left-0 after:top-0;
