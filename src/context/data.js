@@ -154,7 +154,7 @@ export const events = [
 export const cyberBurst = [
     {
         id: 1,
-        title: "𝐓𝐫𝐞𝐚𝐬𝐮𝐫𝐞 𝐇𝐮𝐧𝐭 :",
+        title: "𝐌𝐞𝐠𝐚 𝐄𝐯𝐞𝐧𝐭 :",
         desc: "An exciting adventure of clues, puzzles, and hidden treasures. Explore, solve, and win the ultimate prize! Can you find the treasure?",
         time: "10:00am – 2:00pm",
         date: "18th December",
