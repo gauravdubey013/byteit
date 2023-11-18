@@ -271,7 +271,7 @@ export const techBlitz = [
         desc: "Test your hand-eye coordination and nerves of steel in the electrifying Buzz Wire Game. Navigate a twisted wire without touching it, while the clock is ticking. Can you beat the challenge and reach the end without setting off the buzzer? Only the most skilled and steady-handed participants will emerge victorious!",
         time: "10:00am – 6:00pm",
         date: "22nd December",
-        image: "/buzzWire.png",
+        image: "/buzzWireGame.png",
         btn: "/Event/TechBlitz"
     },
 ];
