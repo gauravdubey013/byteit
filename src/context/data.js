@@ -172,42 +172,6 @@ export const cyberBurst = [
     },
     {
         id: 3,
-        title: "𝐀𝐧𝐢𝐦𝐞 𝐒𝐜𝐫𝐞𝐞𝐧𝐢𝐧𝐠 :",
-        desc: "Step into the world of anime at our exciting screening event! Immerse yourself in captivating stories, breathtaking visuals, and unforgettable characters.",
-        time: "10:00am – 6:00pm",
-        date: "22nd December",
-        image: "/animeScreening.png",
-        btn: "/Event/CyberBurst"
-    },
-    {
-        id: 4,
-        title: "𝐒𝐩𝐞𝐞𝐝𝐰𝐚𝐲 𝐒𝐡𝐨𝐰𝐝𝐨𝐰𝐧 :",
-        desc: "Unleash the speed, master the drift,and conquer the track in this adrenaline-fueled showdown of mini cars.",
-        time: "11:00am – 6:00pm",
-        date: "22nd December",
-        image: "/speeedwayShowdown.png",
-        btn: "/Event/CyberBurst"
-    },
-    {
-        id: 5,
-        title: "𝐒𝐮𝐫𝐯𝐢𝐯𝐚𝐥 𝐀𝐫𝐞𝐧𝐚 :",
-        desc: "Gear up for adrenaline-pumping gaming events featuring BattleGrounds Mobile India (BGMI) and Call of Duty (COD)! Join the action-packed tournaments.",
-        time: "12:00am – 3:00pm",
-        date: "22nd December",
-        image: "/survivalArena.png",
-        btn: "/Event/CyberBurst"
-    },
-    {
-        id: 6,
-        title: "𝐌𝐚𝐭𝐭𝐞 𝐏𝐚𝐢𝐧𝐭𝐢𝐧𝐠 :",
-        desc: "Calling all aspiring artists!Join us in a friendly and approachable matte painting competition where creativity knows no bounds!",
-        time: "10:30am – 11:00am",
-        date: "22nd December",
-        image: "/mattePainting.png",
-        btn: "/Event/CyberBurst"
-    },
-    {
-        id: 7,
         title: "𝐄-𝐖𝐚𝐬𝐭𝐞 𝐀𝐫𝐭 𝐄𝐱𝐩𝐨 :",
         desc: "Transform discarded electronics into creative masterpieces as you reimagine e-waste into stunning models.",
         time: "10:30am – 12:00pm",
@@ -216,12 +180,48 @@ export const cyberBurst = [
         btn: "/Event/CyberBurst"
     },
     {
-        id: 8,
+        id: 4,
         title: "𝐀𝐩𝐩 𝐖𝐚𝐫 :",
         desc: "Unleash your coding prowess in our thrilling app development competition! Showcase your creativity, innovation, and technical skills as you bring your app ideas to life. Compete against fellow developers, impress the judges, and win prize.",
         time: "11:30am – 12:15pm",
         date: "22nd December",
         image: "/appWar.png",
+        btn: "/Event/CyberBurst"
+    },
+    {
+        id: 5,
+        title: "𝐀𝐧𝐢𝐦𝐞 𝐒𝐜𝐫𝐞𝐞𝐧𝐢𝐧𝐠 :",
+        desc: "Step into the world of anime at our exciting screening event! Immerse yourself in captivating stories, breathtaking visuals, and unforgettable characters.",
+        time: "10:00am – 6:00pm",
+        date: "22nd December",
+        image: "/animeScreening.png",
+        btn: "/Event/CyberBurst"
+    },
+    {
+        id: 6,
+        title: "𝐒𝐩𝐞𝐞𝐝𝐰𝐚𝐲 𝐒𝐡𝐨𝐰𝐝𝐨𝐰𝐧 :",
+        desc: "Unleash the speed, master the drift,and conquer the track in this adrenaline-fueled showdown of mini cars.",
+        time: "11:00am – 6:00pm",
+        date: "22nd December",
+        image: "/speeedwayShowdown.png",
+        btn: "/Event/CyberBurst"
+    },
+    {
+        id: 7,
+        title: "𝐒𝐮𝐫𝐯𝐢𝐯𝐚𝐥 𝐀𝐫𝐞𝐧𝐚 :",
+        desc: "Gear up for adrenaline-pumping gaming events featuring BattleGrounds Mobile India (BGMI) and Call of Duty (COD)! Join the action-packed tournaments.",
+        time: "12:00am – 3:00pm",
+        date: "22nd December",
+        image: "/survivalArena.png",
+        btn: "/Event/CyberBurst"
+    },
+    {
+        id: 8,
+        title: "𝐌𝐚𝐭𝐭𝐞 𝐏𝐚𝐢𝐧𝐭𝐢𝐧𝐠 :",
+        desc: "Calling all aspiring artists!Join us in a friendly and approachable matte painting competition where creativity knows no bounds!",
+        time: "10:30am – 11:00am",
+        date: "22nd December",
+        image: "/mattePainting.png",
         btn: "/Event/CyberBurst"
     },
 ];
