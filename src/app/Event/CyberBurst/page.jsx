@@ -15,7 +15,7 @@ const CyberBurst = () => {
         }
         eventAbout={"About Activites"}
         eventData={cyberBurst}
-        eventBtnLink={"Registet Now"}
+        eventBtnLink={"Register Now"}
       />
     </>
   );
