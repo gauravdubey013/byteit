@@ -96,7 +96,7 @@ export const EventContent = (props) => {
 };
 
 export const EventDetails = (props) => {
-  var date = props.setEvDate;
+  // var date = props.setEvDate;
   const evDataToMap = props.evData;
   const decLineClamp = props.evLineClamp;
   return (
@@ -107,7 +107,7 @@ export const EventDetails = (props) => {
             className="w-full h-full flex flex-col items-center justify-center gap-2 overflow-hidden"
             key={event.id}
           >
-            <div
+            {/* <div
               className={`${
                 date
                   ? "flex text-[25px] md:text-[30px] font-medium text-[#43fcff]"
@@ -115,8 +115,7 @@ export const EventDetails = (props) => {
               }`}
             >
               {event.date}
-            </div>
-
+            </div> */}
             <div
               style={
                 event.id % 2 === 0 && window.innerWidth >= 768
@@ -136,7 +135,7 @@ export const EventDetails = (props) => {
                 />
               </div>
               <div className="content h-full flex-1 flex flex-col gap-2 ease-in-out duration-200">
-                <div className="text-[20px] md:text-[30px] font-medium text-[#43fcff] flex justify-between gap-2">
+                <div className="text-[18px] md:text-[25px] font-medium text-[#43fcff] flex justify-between gap-2">
                   <div className="">{event.title}</div>
                   <div className="">{event.time}</div>
                 </div>
@@ -149,7 +148,7 @@ export const EventDetails = (props) => {
                 </p>
                 <Link
                   href={event.btn}
-                  className="w-[25%] h-[4vh] text-center flex justify-center items-center text-[#43fcff] hover:text-white scale-95 hover:scale-100 hover:bg-[#43fcff]/40 hover:border-[0.5px] hover:border-[#43fcff] rounded-full ease-in-out duration-300"
+                  className="w-[30%] md:w-[20%] h-[4vh] text-center flex justify-center items-center text-white hover:text-[#43fcff] scale-95 hover:scale-100 bg-[#43fcff]/40 hover:bg-transparent hover:border-[0.5px] hover:border-[#43fcff] rounded-full ease-in-out duration-300"
                 >
                   {props.evBtnLink}
                 </Link>
@@ -164,6 +163,6 @@ export const EventDetails = (props) => {
 };
 
 EventDetails.defaultProps = {
-  setEvDate: false,
+  // setEvDate: false,
   evLineClamp: false,
 };
