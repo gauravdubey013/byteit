@@ -1,57 +1,25 @@
 import React from "react";
-import { musicNlyrics } from "./musicData";
-import MusicNLyricPlayer from "@/components/MusicNLyricPlayer";
+import { musics } from "./musicsdata";
+import MusicPlayer from "@/components/MusicPlayer";
 
 const getData = (mus) => {
-  const musData = musicNlyrics[mus];
+  const musData = musics[mus];
   if (musData) {
     return musData;
   }
   // return notFound();
+  return <>Not Found</>;
 };
 
-const MusicPlayer = ({ params }) => {
+const KaraokePlayer = ({ params }) => {
   const musData = getData(params.music);
   return (
     <>
-      <div className="">
-        <h1 className="catoTitle text-[25px] text-[#53c28b] uppercase font-bold">
-          {params.music}
-        </h1>
-      </div>
-      <div className="">
-        {/* {musData.map((musNlrc) => (
-          <div className="w-full h-full">
-            <h1 className="catoTitle text-[25px] text-[#53c28b] uppercase font-bold">
-              {musNlrc.title}
-            </h1>
-            <div className="">
-              <MusicNLyricPlayer
-                setAudio={musNlrc.audio}
-                setLyric={musNlrc.lyric}
-              />
-            </div>
-          </div>
-        ))} */}
-
-        <div className="w-full h-full">
-          {musData.map((musLrc) => {
-            <div className="">
-              <h1 className="catoTitle text-[25px] text-[#53c28b] uppercase font-bold">
-                {musLrc.title}
-              </h1>
-              <div className="">
-                <MusicNLyricPlayer
-                  setAudio={musLrc.audio}
-                  setLyric={musLrc.lyric}
-                />
-              </div>
-            </div>;
-          })}
-        </div>
+      <div className="w-full h-[80vh] flex flex-col gap-3 items-center justify-center">
+        <MusicPlayer setTitle={musData.title} setAudio={musData.audio} setLyric={musData.lyric} />
       </div>
     </>
   );
 };
 
-export default MusicPlayer;
+export default KaraokePlayer;

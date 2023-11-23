@@ -55,21 +55,14 @@ html {
   --loader-bar-height: 1px;
 }
 
-/* const response = await openai.images.generate({
-     model: "dall-e-3",
-     prompt: prompt,
-     n: 1,
-   size: "1024x1024",
- });
-
- const API_KEY = process.env.OPENAI_API_SECRET_KEY;
- const openai = new OpenAI({ apiKey: apiKey });
-
- const openai = new OpenAI({
-   apiKey: "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",
-   dangerouslyAllowBrowser: true,
- }); */
-
  .shadowEff {
   @apply bg-[#43fcff]/60 flex after:content-[""] after:w-full after:h-full after:absolute after:shadow-[0_10px_15px_-2px_#000,0_5px_7px_-3px_#00fbff81] after:z-[-1] after:left-0 after:top-0;
+}
+
+.lyric {
+  @apply opacity-0 translate-y-5 text-2xl font-bold leading-normal text-[#33dbbf] text-center uppercase max-w-[300px] h-[10vh] overflow-hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.lyric.active {
+  @apply opacity-100 translate-y-0;
 }
