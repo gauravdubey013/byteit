@@ -222,7 +222,7 @@ export const cyberBurst = [
         time: "12:00am – 3:00pm",
         date: "22nd December",
         image: "/survivalArena.png",
-        btn: "https://surveyheart.com/form/65632e5582fca3068495a32c"
+        btn: "https://docs.google.com/forms/d/e/1FAIpQLScTzaBaHmzgTFqwx7b5bpmcb-Zrf_6vt26qyp7H3qlJFqH47w/viewform?usp=sf_link"
     },
     {
         id: 9,
