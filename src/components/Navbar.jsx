@@ -28,7 +28,7 @@ const Navbar = () => {
           <Link
             spy={true}
             href={"/"}
-            className="flex flex-row items-center text-3xl font-bold text-[22px] animate-fade-in-down hover:text-[#43fcff] ease-in-out duration-500"
+            className="flex flex-row items-center animate-fade-in-down hover:text-[#43fcff] ease-in-out duration-500"
           >
             <Image
               src={"/byteITLogo.png"}
@@ -37,7 +37,7 @@ const Navbar = () => {
               alt="Byte IT Logo"
               className="w-10 h-10 mr-1"
             />
-            <span className="self-center text-2xl font-semibold text-[#43fcff]">
+            <span className="self-center text-xl font-semibold text-[#43fcff]">
               BYTE-IT
             </span>
           </Link>
