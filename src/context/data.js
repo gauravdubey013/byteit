@@ -186,7 +186,7 @@ export const cyberBurst = [
         time: "10:00am – 6:00pm",
         date: "22nd December",
         image: "/animeScreening.png",
-        btn: "/Event/CyberBurst"
+        btn: "https://docs.google.com/forms/d/e/1FAIpQLSe2NskeVOeiNJRITUVAfLRmFNQHZiNU0R8Zf1ltlbLiZMK51w/viewform?usp=sf_link"
     },
     {
         id: 6,
@@ -195,7 +195,7 @@ export const cyberBurst = [
         time: "10:30am – 12:00pm",
         date: "22nd December",
         image: "/eWasteArtExpo.png",
-        btn: "/Event/CyberBurst"
+        btn: "https://docs.google.com/forms/d/e/1FAIpQLSf3f_8whF_9NlDFdR-HciDHFFvxEfyvj4aEq9ZNoJn8t4fT5A/viewform?usp=sf_link"
     },
     {
         id: 7,
@@ -204,7 +204,7 @@ export const cyberBurst = [
         time: "11:30am – 12:15pm",
         date: "22nd December",
         image: "/appWar.png",
-        btn: "/Event/CyberBurst"
+        btn: "https://docs.google.com/forms/d/e/1FAIpQLSccVTkV6Z0LA0fq6wMDhA9dxrZvUGFJVhOc-Qr8R3iBWdhZBQ/viewform?usp=sf_link"
     },
     {
         id: 8,
@@ -213,7 +213,7 @@ export const cyberBurst = [
         time: "10:00am – 12:00pm",
         date: "20th December",
         image: "/shortFlim.png",
-        btn: "/Event/CyberBurst"
+        btn: "https://docs.google.com/forms/d/e/1FAIpQLSeua9Ytt1CUYZSVdfqWcqgiw8ZWU1jp1IsH3jOdSekNvHffEg/viewform?usp=sf_link"
     },
     {
         id: 9,
@@ -222,7 +222,7 @@ export const cyberBurst = [
         time: "10:30am – 11:00am",
         date: "22nd December",
         image: "/mattePainting.png",
-        btn: "/Event/CyberBurst"
+        btn: "https://docs.google.com/forms/d/e/1FAIpQLSejWdhEd9SALuLFZooKwhoui6VQWcHFj_8EWAmvccFIz429KA/viewform?usp=sf_link"
     },
     {
         id: 10,
@@ -231,7 +231,7 @@ export const cyberBurst = [
         time: "11:00am – 6:00pm",
         date: "22nd December",
         image: "/speeedwayShowdown.png",
-        btn: "/Event/CyberBurst"
+        btn: "https://docs.google.com/forms/d/e/1FAIpQLSfghShcdwZ3vX4VSzXM5FIcVyoVIxTpnh1HZUXUaoZaVnCUdQ/viewform?usp=sf_link"
     },
 ];
 
