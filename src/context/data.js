@@ -159,7 +159,7 @@ export const cyberBurst = [
         time: "10:00am – 2:00pm",
         date: "18th December",
         image: "/treasureHunt.png",
-        btn: "/Event/CyberBurst"
+        btn: "https://docs.google.com/forms/d/e/1FAIpQLSfCF679Y5_0L_0iwire186Oj4DuWEeeE5FG4pZED6lCKmpmxQ/viewform?usp=sf_link"
     },
     {
         id: 2,
