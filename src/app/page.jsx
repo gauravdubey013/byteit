@@ -14,7 +14,6 @@ export default function Home() {
   let by = useTransform(scrollYProgress, [0, 1], ["0%", "250%"]);
   let opacity = useTransform(scrollYProgress, [0, 1], ["80%", "-100%"]);
   let scale = useTransform(scrollYProgress, [0, 1], ["100%", "200%"]);
-  // let ay = useTransform(scrollYProgress, [0, 1], ["-160%", "120%"]);
 
   return (
     <>
@@ -70,9 +69,8 @@ export const HeroContent = () => {
   return (
     <>
       <div className="w-full h-full bg-transparent relative z-20 flex flex-col items-center justify-center text-center ease-in-out duration-300">
-        <div className="text-[15px] md:text-[20px] flex flex-col ease-in-out duration-500">
-          <span>PARLE TILAK VIDYALAYA</span>
-          <span>ASSOCIATION&apos;S</span>
+        <div className="text-[15px] md:text-[20px] ease-in-out duration-500">
+          <span>PARLE TILAK VIDYALAYA ASSOCIATION&apos;S</span>
         </div>
         <div className="text-[25px] md:text-[30px] lg:text-[35px] font-bold leading-[36px] md:leading-[40px] lg:leading-[45px] ease-in-out duration-200">
           <div className="w-full animate-slideDown text-[#53c28b] flex flex-col">
