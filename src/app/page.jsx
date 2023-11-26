@@ -31,7 +31,7 @@ export default function Home() {
           <motion.div
             className="inset-0 absolute z-0"
             style={{
-              backgroundImage: "url(/bg3.gif)",
+              backgroundImage: "url(/heroBannerTwo.gif)",
               backgroundPosition: "bottom",
               backgroundSize: "cover",
               y: by,
