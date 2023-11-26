@@ -70,7 +70,7 @@ export const HeroContent = () => {
     <>
       <div className="w-full h-full bg-transparent relative z-20 flex flex-col items-center justify-center text-center ease-in-out duration-300">
         <div className="text-[15px] md:text-[20px] ease-in-out duration-500">
-          <span>PARLE TILAK VIDYALAYA ASSOCIATION&apos;S</span>
+          <span classname="backdrop-filter backdrop-blur-sm border-[0.3px]">PARLE TILAK VIDYALAYA ASSOCIATION&apos;S</span>
         </div>
         <div className="text-[25px] md:text-[30px] lg:text-[35px] font-bold leading-[36px] md:leading-[40px] lg:leading-[45px] ease-in-out duration-200">
           <div className="w-full animate-slideDown text-[#53c28b] flex flex-col">
