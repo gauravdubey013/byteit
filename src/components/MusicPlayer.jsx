@@ -213,26 +213,29 @@ const MusicPlayer = (props) => {
   console.log("what u singing :\n" + notesStore);
 
   return (
+    <>
     <div className="text-xl flex flex-col gap-2 items-center justify-center">
-      <h1 className="text-3xl text-[#33dbbf]">Play music to read lyrics...</h1>
-      <div className="w-full h-full flex items-center justify-between gap-2">
-        <h1 className="text-[25px] text-[#33dbbf] uppercase font-bold">
-          {titleFetch}
-          {/* {params.music} */}
-        </h1>
-        <p className="text-[#33dbbf]">Points : {points}%</p>
-      </div>
-      <audio
-        onPlay={handleOnPlay}
-        onPause={handleOnPause}
-        className="player w-full h-[19vh]"
-        controls
-        onTimeUpdate={handleTimeUpdate}
-      >
-        <source src={audioFetch} type="audio/mpeg" />
-      </audio>
-      <div className="lyric"></div>
-    </div>
+  <h1 className="text-3xl text-teal-500">Play music to read lyrics...</h1>
+  <div className="w-full h-full flex items-center justify-between gap-2">
+    <h1 className="text-2xl text-teal-500 uppercase font-bold">
+      {titleFetch}
+    </h1>
+    <p className="text-teal-500">Points: {points}%</p>
+  </div>
+  <audio
+    onPlay={handleOnPlay}
+    onPause={handleOnPause}
+    className="player w-full h-1/4"
+    controls
+    onTimeUpdate={handleTimeUpdate}
+  >
+    <source src={audioFetch} type="audio/mpeg" />
+  </audio>
+  <div className="lyric mt-4 p-4 bg-gray-800 text-white rounded-lg">
+    {/* Display your synchronized lyrics here */}
+  </div>
+</div>
+    </>
   );
 };
 
