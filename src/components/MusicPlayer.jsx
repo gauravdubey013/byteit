@@ -214,27 +214,54 @@ const MusicPlayer = (props) => {
 
   return (
     <>
-    <div className="text-xl flex flex-col gap-2 items-center justify-center">
-  <h1 className="text-3xl text-teal-500">Play music to read lyrics...</h1>
-  <div className="w-full h-full flex items-center justify-between gap-2">
-    <h1 className="text-2xl text-teal-500 uppercase font-bold">
-      {titleFetch}
-    </h1>
-    <p className="text-teal-500">Points: {points}%</p>
-  </div>
-  <audio
-    onPlay={handleOnPlay}
-    onPause={handleOnPause}
-    className="player w-full h-1/4"
-    controls
-    onTimeUpdate={handleTimeUpdate}
-  >
-    <source src={audioFetch} type="audio/mpeg" />
-  </audio>
-  <div className="lyric mt-4 p-4 bg-gray-800 text-white rounded-lg">
-    {/* Display your synchronized lyrics here */}
-  </div>
-</div>
+      <div className="w-full h-[71vh] md:h-screen relative">
+        <div className="w-[25%] h-[20%] z-20 scale-75 -ml-10 -mt-3 absolute hidden md:flex flex-col items-center justify-center gap-2">
+          <h1 className="text-3xl text-white font-extrabold ease-in-out duration-200">
+            Play music to read lyrics...
+          </h1>
+          <div className="w-full h-[30%] flex items-center justify-between gap-2 text-2xl text-teal-500 px-2">
+            <h1 className="uppercase font-bold">{titleFetch}</h1>
+            <p className="">Points: {points}%</p>
+          </div>
+          <div className="w-full h-full">
+            <audio
+              onPlay={handleOnPlay}
+              onPause={handleOnPause}
+              className="player w-full h-full"
+              controls
+              onTimeUpdate={handleTimeUpdate}
+            >
+              <source src={audioFetch} type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+        <div className="w-full h-full z-10 flex flex-col gap-2 items-center justify-center px-7">
+          <div className="w-full h-[25%] flex flex-col items-center justify-center gap-2 md:hidden">
+            <h1 className="text-3xl text-white font-extrabold ease-in-out duration-200">
+              Play music to read lyrics...
+            </h1>
+            <div className="w-full h-[30%] flex items-center justify-between gap-2 text-2xl text-teal-500 px-2">
+              <h1 className="uppercase font-bold">{titleFetch}</h1>
+              <p className="">Points: {points}%</p>
+            </div>
+            <div className="w-full h-full flex items-center justify-center md:py-2">
+              <audio
+                onPlay={handleOnPlay}
+                onPause={handleOnPause}
+                className="player w-full h-full"
+                controls
+                onTimeUpdate={handleTimeUpdate}
+              >
+                <source src={audioFetch} type="audio/mpeg" />
+              </audio>
+            </div>
+          </div>
+          <div className="w-auto h-[50%] md:h-auto scale-x-150 flex items-center justify-center text-center text-white">
+            <div className="lyric text-[100rem] scale-150"></div>
+            {/* Display your synchronized lyrics here */}
+          </div>
+        </div>
+      </div>
     </>
   );
 };
