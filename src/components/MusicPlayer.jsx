@@ -256,8 +256,8 @@ const MusicPlayer = (props) => {
               </audio>
             </div>
           </div>
-          <div className="w-auto h-[50%] md:h-auto scale-x-150 flex items-center justify-center text-center text-white">
-            <div className="lyric text-[100rem] scale-150"></div>
+          <div className="w-auto h-[50%] md:h-auto md:scale-x-150 flex items-center justify-center text-center text-white">
+            <div className="lyric text-[100rem] scale-110 md:scale-150"></div>
             {/* Display your synchronized lyrics here */}
           </div>
         </div>
