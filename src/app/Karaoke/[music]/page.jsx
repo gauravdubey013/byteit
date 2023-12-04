@@ -15,8 +15,15 @@ const KaraokePlayer = ({ params }) => {
   const musData = getData(params.music);
   return (
     <>
-      <div className="w-full h-[80vh] flex flex-col gap-3 items-center justify-center">
-        <MusicPlayer setTitle={musData.title} setAudio={musData.audio} setLyric={musData.lyric} />
+      <div
+        id="musicPlayer"
+        className="w-full h-auto"
+      >
+        <MusicPlayer
+          setTitle={musData.title}
+          setAudio={musData.audio}
+          setLyric={musData.lyric}
+        />
       </div>
     </>
   );
