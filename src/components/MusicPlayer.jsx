@@ -215,7 +215,7 @@ const MusicPlayer = (props) => {
   return (
     <>
       <div className="w-full h-[71vh] md:h-screen relative">
-        <div className="w-[25%] h-[20%] z-20 scale-75 -ml-10 -mt-3 absolute hidden md:flex flex-col items-center justify-center gap-2">
+        <div className="w-[35%] h-[20%] z-20 scale-75 -ml-10 -mt-3 absolute hidden md:flex flex-col items-center justify-center gap-2">
           <h1 className="text-3xl text-white font-extrabold ease-in-out duration-200">
             Play music to read lyrics...
           </h1>
