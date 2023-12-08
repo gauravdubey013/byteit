@@ -221,11 +221,11 @@ const MusicPlayer = (props) => {
   return (
     <>
       <div className="w-full h-[71vh] md:h-screen relative px-7">
-        <div className="w-full md:w-[20%] h-[25%] md:h-[18%] md:absolute md:-ml-5 flex flex-col items-center justify-center gap-2">
+        <div className="w-auto h-[25%] md:h-[18%] md:absolute md:-ml-5 flex flex-col items-center justify-center gap-2">
           <h1 className="text-3xl md:text-2xl text-white font-extrabold ease-in-out duration-200">
             Play music to read lyrics...
           </h1>
-          <div className="w-full h-[30%] flex items-center justify-between gap-2 md:gap-1 text-2xl md:text-[22px] text-teal-500 px-2 md:p-0">
+          <div className="w-full h-[30%] flex items-center justify-between gap-2 text-2xl md:text-xl text-teal-500 px-2">
             <h1 className="uppercase font-bold">{titleFetch}</h1>
             <p>Points: {points}%</p>
           </div>
