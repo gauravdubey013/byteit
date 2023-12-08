@@ -17,9 +17,10 @@ const KaraokePlayer = ({ params }) => {
     <>
       <div
         id="musicPlayer"
-        className="w-full h-auto"
+        className="w-full h-auto flex flex-col gap-3 items-center justify-center"
       >
         <MusicPlayer
+          setNavigate={"#musicPlayer"}
           setTitle={musData.title}
           setAudio={musData.audio}
           setLyric={musData.lyric}
