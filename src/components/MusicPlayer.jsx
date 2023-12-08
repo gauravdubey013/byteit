@@ -229,7 +229,7 @@ const MusicPlayer = (props) => {
             <h1 className="uppercase font-bold">{titleFetch}</h1>
             <p>Points: {points}%</p>
           </div>
-          <div className="w-full h-full flex items-center justify-center md:py-2">
+          <div className="w-full h-full flex items-center justify-center">
             <audio
               onPlay={handleOnPlay}
               onPause={handleOnPause}
