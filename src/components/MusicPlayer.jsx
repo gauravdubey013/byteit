@@ -1,12 +1,16 @@
 "use client";
 
-import { musics } from "@/app/Karaoke/[music]/musicsdata";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { musics } from "@/app/Karaoke/[music]/musicsdata";
 
 const MusicPlayer = (props) => {
   const titleFetch = props.setTitle;
   const audioFetch = props.setAudio;
   const lyricFetch = props.setLyric;
+  const navigateProps = props.setNavigate;
+
+  const navigate = useRouter();
 
   const [lyrics, setLyrics] = useState([]);
   const [pointArray, setPointArray] = useState([]);
@@ -67,8 +71,9 @@ const MusicPlayer = (props) => {
 
     if (index == null) return;
 
+    const currentLyric = lyrics[index].text;
     const lyricElement = document.querySelector(".lyric");
-    lyricElement.innerHTML = lyrics[index].text;
+    lyricElement.innerHTML = currentLyric;
 
     if (lyricIndex !== index) {
       if (index % 3) {
@@ -77,7 +82,7 @@ const MusicPlayer = (props) => {
         setNote("");
         setIsPlaying(Math.random(100));
       }
-      setLyricStore(lyricStore + lyrics[index].text);
+      setLyricStore(lyricStore + currentLyric);
       setLyricIndex(index);
       countScore();
     }
@@ -135,6 +140,7 @@ const MusicPlayer = (props) => {
 
   const handleOnPlay = () => {
     setIsRecording(true);
+    navigate.push(navigateProps);
   };
 
   const handleOnPause = () => {
@@ -214,16 +220,16 @@ const MusicPlayer = (props) => {
 
   return (
     <>
-      <div className="w-full h-[71vh] md:h-screen relative">
-        <div className="w-[35%] h-[20%] z-20 scale-75 -ml-10 -mt-3 absolute hidden md:flex flex-col items-center justify-center gap-2">
-          <h1 className="text-3xl text-white font-extrabold ease-in-out duration-200">
+      <div className="w-full h-[71vh] md:h-screen relative px-7">
+        <div className="w-full md:w-[20%] h-[25%] md:h-[18%] md:absolute md:-ml-5 flex flex-col items-center justify-center gap-2">
+          <h1 className="text-3xl md:text-2xl text-white font-extrabold ease-in-out duration-200">
             Play music to read lyrics...
           </h1>
-          <div className="w-full h-[30%] flex items-center justify-between gap-2 text-2xl text-teal-500 px-2">
+          <div className="w-full h-[30%] flex items-center justify-between gap-2 text-2xl md:text-xl text-teal-500 px-2">
             <h1 className="uppercase font-bold">{titleFetch}</h1>
             <p className="">Points: {points}%</p>
           </div>
-          <div className="w-full h-full">
+          <div className="w-full h-full flex items-center justify-center md:py-2">
             <audio
               onPlay={handleOnPlay}
               onPause={handleOnPause}
@@ -235,31 +241,9 @@ const MusicPlayer = (props) => {
             </audio>
           </div>
         </div>
-        <div className="w-full h-full z-10 flex flex-col gap-2 items-center justify-center px-7">
-          <div className="w-full h-[25%] flex flex-col items-center justify-center gap-2 md:hidden">
-            <h1 className="text-3xl text-white font-extrabold ease-in-out duration-200">
-              Play music to read lyrics...
-            </h1>
-            <div className="w-full h-[30%] flex items-center justify-between gap-2 text-2xl text-teal-500 px-2">
-              <h1 className="uppercase font-bold">{titleFetch}</h1>
-              <p className="">Points: {points}%</p>
-            </div>
-            <div className="w-full h-full flex items-center justify-center md:py-2">
-              <audio
-                onPlay={handleOnPlay}
-                onPause={handleOnPause}
-                className="player w-full h-full"
-                controls
-                onTimeUpdate={handleTimeUpdate}
-              >
-                <source src={audioFetch} type="audio/mpeg" />
-              </audio>
-            </div>
-          </div>
-          <div className="w-auto h-[50%] md:h-auto md:scale-x-150 flex items-center justify-center text-center text-white">
-            <div className="lyric text-[100rem] scale-110 md:scale-150"></div>
-            {/* Display your synchronized lyrics here */}
-          </div>
+        <div className="w-full h-[50%] md:h-full flex items-center justify-center text-center text-white">
+          <div className="lyric"></div>
+          {/* Display your synchronized lyrics here */}
         </div>
       </div>
     </>
