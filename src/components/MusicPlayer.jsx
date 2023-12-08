@@ -225,7 +225,7 @@ const MusicPlayer = (props) => {
           <h1 className="text-3xl md:text-2xl text-white font-extrabold ease-in-out duration-200">
             Play music to read lyrics...
           </h1>
-          <div className="w-full h-[30%] flex items-center justify-between gap-2 md:gap-1 text-2xl md:text-l text-teal-500 px-2 md:p-0">
+          <div className="w-full h-[30%] flex items-center justify-between gap-2 md:gap-1 text-2xl md:text-[14px] text-teal-500 px-2 md:p-0">
             <h1 className="uppercase font-bold">{titleFetch}</h1>
             <p>Points: {points}%</p>
           </div>
