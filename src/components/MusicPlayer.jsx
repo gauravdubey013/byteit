@@ -222,18 +222,12 @@ const MusicPlayer = (props) => {
 
   return (
     <>
-      <div className="w-full h-[71vh] md:h-screen relative px-7">
-        <div className="w-auto h-[25%] md:h-[18%] md:absolute md:-ml-5 flex flex-col items-center justify-center gap-2">
-          <Link href={"/Karaoke"} className="w-[25%] h-auto flex items-center justify-center gap-2 rounded-full hover:border-[0.5px] active:scale-90">
-          <div>
-          <IoArrowBackCircleOutline />
-          </div>
-          <div>Back</div>
-          </Link>
+      <div className="w-full h-[71vh] md:h-screen relative px-7 md:px-2">
+        <div className="w-auto h-[25%] md:h-[22%] md:absolute flex flex-col items-center justify-center gap-2">
           <h1 className="text-3xl md:text-2xl text-white font-extrabold ease-in-out duration-200">
             Play music to read lyrics...
           </h1>
-          <div className="w-full h-[30%] flex items-center justify-between gap-2 md:gap-5 text-2xl md:text-xl text-teal-500 px-2">
+          <div className="w-full h-[30%] flex items-center justify-between gap-2 md:gap-5 text-2xl md:text-xl text-[#43fcff] px-2">
             <h1 className="uppercase font-bold">{titleFetch}</h1>
             <p>Points: {points}%</p>
           </div>
@@ -248,10 +242,17 @@ const MusicPlayer = (props) => {
               <source src={audioFetch} type="audio/mpeg" />
             </audio>
           </div>
+          <Link
+            href={"/Karaoke"}
+            className="w-[6rem] h-[5rem] flex items-center justify-center gap-2 text-xl rounded-full border-[0.5px] border-[#43fcff] hover:border-[#43fcff]/60 hover:scale-110 hover:text-[#43fcff] active:scale-100"
+          >
+            <IoArrowBackCircleOutline />
+
+            <span>Back</span>
+          </Link>
         </div>
-        <div className="w-full h-[50%] md:h-full flex items-center justify-center text-center text-white">
+        <div className="w-full h-[50%] md:h-full flex items-center justify-center text-center">
           <div className="lyric"></div>
-          {/* Display your synchronized lyrics here */}
         </div>
       </div>
     </>
