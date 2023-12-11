@@ -7,7 +7,7 @@ const Event = () => {
     <>
       <EventCompo
         eventTitle={"Byte IT"}
-        eventDay={"Starting From 18"}
+        eventDay={"On this 18"}
         eventDateSup={`th`}
         eventMonth={"December"}
         eventAbout={"About Events"}
