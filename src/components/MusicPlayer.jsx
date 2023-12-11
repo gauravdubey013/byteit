@@ -244,7 +244,7 @@ const MusicPlayer = (props) => {
           </div>
           <Link
             href={"/Karaoke"}
-            className="w-[6rem] h-[5rem] scale-90 md:scale-100 flex items-center justify-center gap-2 text-xl rounded-full border-[0.5px] border-[#43fcff] hover:border-[#43fcff]/60 hover:scale-110 hover:text-[#43fcff] active:scale-100"
+            className="w-[6rem] h-[5rem] scale-90 md:scale-100 flex items-center justify-center gap-2 text-xl rounded-full border-[0.5px] border-[#43fcff] hover:border-[#43fcff]/60 hover:scale-110 hover:text-[#43fcff] active:scale-100 ease-in-out duration-200"
           >
             <IoArrowBackCircleOutline />
 
