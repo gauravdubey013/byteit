@@ -11,4 +11,10 @@ export const musics = {
         audio: "/assets/theLoneliestAudio.mp3",
         lyric: "/assets/theLoneliestLyric.lrc",
     }
+    hindi: {
+        id: 1,
+        title: " Ye haseen wadiya by KS chitra",
+        audio: "/assets/hindiAudio.mp3",
+        lyric: "/assets/hindiLyric.lrc",
+    }
 };
