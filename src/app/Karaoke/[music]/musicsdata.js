@@ -10,7 +10,7 @@ export const musics = {
         title: "The Loneliest",
         audio: "/assets/theLoneliestAudio.mp3",
         lyric: "/assets/theLoneliestLyric.lrc",
-    }
+    },
     hindi: {
         id: 1,
         title: " Ye haseen wadiya by KS chitra",
